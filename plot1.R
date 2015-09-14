@@ -10,4 +10,6 @@ datosReq <- subset(datos, Date >= date1 & Date <= date2)
 names(datos)
 attach(datos)
 hist(datosReq$Global_active_power, col = "red", plot = TRUE, main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
-
+dev.copy(png, file="plot1.png", width=480, height=480)
+dev.off()
+cat("plot1.png guardado", getwd())
